@@ -31,3 +31,14 @@ print(MonthCount)
 print(increasedate)
 print(decreasedate)
 
+print("Financial Analysis")
+print("----------------------------")
+print("Total Months: " + str(MonthCount))
+print("Total: $" + str(TotalProfLoss))
+print("Average Change: $" + str(round(avepl,2)))
+print("Greatest Increase in Profits: " + increasedate + " ($" + str(round(increase)) + ")")
+print("Greatest Decrease in Profits: " + decreasedate + " ($" + str(round(decrease)) + ")")
+
+outputfile = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyBank/Analysis/results.txt")
+with open (outputfile,"w") as resultsfile:
+    resultsfile.write("Results")
