@@ -23,6 +23,13 @@ with open (filepath, "r") as csvfile:
 print(votecounts)
 print(candidates)
 
+print("Election Results")
+print("---------------------")
+print("Total Votes: " + str(TotalVotes))
+print("---------------------")
+for candidate in candidates:
+    print(candidates[candidates.index(candidate)] + ": " + str(votecounts[indexnum]))
+
 outputfile = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyPoll/Analysis/results.txt")
 with open (outputfile,"w") as resultsfile:
     resultsfile.write("Results")

@@ -41,4 +41,10 @@ print("Greatest Decrease in Profits: " + decreasedate + " ($" + str(round(decrea
 
 outputfile = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyBank/Analysis/results.txt")
 with open (outputfile,"w") as resultsfile:
-    resultsfile.write("Results")
+    resultsfile.write("Financial Analysis \n")
+    resultsfile.write("---------------------------- \n")
+    resultsfile.write("Total Months: " + str(MonthCount) + "\n")
+    resultsfile.write("Total: $" + str(TotalProfLoss) + "\n")
+    resultsfile.write("Average Change: $" + str(round(avepl,2)) + "\n")
+    resultsfile.write("Greatest Increase in Profits: " + increasedate + " ($" + str(round(increase)) + ")\n")
+    resultsfile.write("Greatest Decrease in Profits: " + decreasedate + " ($" + str(round(decrease)) + ")\n")
