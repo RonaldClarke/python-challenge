@@ -4,6 +4,7 @@ filepath = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyB
 MonthCount = 0
 TotalProfLoss = 0
 ProfitLoss = []
+ChangeAm = []
 
 with open(filepath,"r") as csvfile:
     csvreader = csv.reader(csvfile,delimiter=",")   
@@ -12,5 +13,9 @@ with open(filepath,"r") as csvfile:
         MonthCount = MonthCount + 1
         TotalProfLoss = TotalProfLoss + int(row[1])
         ProfitLoss.append(row[1])
-print(ProfitLoss)
+    for i in range(1,len(ProfitLoss)):
+        change = (float(ProfitLoss[i]) - float(ProfitLoss[i-1]))
+        ChangeAm.append(change)
+        avepl = (sum(ChangeAm)/len(ChangeAm))
+print(avepl)
 
