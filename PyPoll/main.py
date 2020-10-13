@@ -35,6 +35,19 @@ for candidate in candidates:
         winner = candidates[candidates.index(candidate)]
 print("----------------------")
 print("Winner: " + winner)
+print("----------------------")
 outputfile = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyPoll/Analysis/results.txt")
 with open (outputfile,"w") as resultsfile:
-    resultsfile.write("Results")
+    resultsfile.write("Election Results \n")
+    resultsfile.write("--------------------- \n")
+    resultsfile.write("Total Votes: " + str(TotalVotes) +"\n")
+    resultsfile.write("--------------------- \n")
+    winnervote = 0
+    for candidate in candidates:
+        resultsfile.write(candidates[candidates.index(candidate)] + ": " + str(round((((votecounts[candidates.index(candidate)])/TotalVotes)*100),3)) + "% (" + str(votecounts[candidates.index(candidate)]) + ") \n")
+        if votecounts[candidates.index(candidate)] > winnervote:
+            winnervote = votecounts[candidates.index(candidate)]
+            winner = candidates[candidates.index(candidate)]
+    resultsfile.write("---------------------- \n")
+    resultsfile.write("Winner: " + winner + "\n")
+    resultsfile.write("----------------------")
