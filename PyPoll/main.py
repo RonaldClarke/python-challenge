@@ -28,7 +28,7 @@ print("---------------------")
 print("Total Votes: " + str(TotalVotes))
 print("---------------------")
 for candidate in candidates:
-    print(candidates[candidates.index(candidate)] + ": " + str(votecounts[indexnum]))
+    print(candidates[candidates.index(candidate)] + ": " + str(votecounts[candidates.index(candidate)]))
 
 outputfile = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyPoll/Analysis/results.txt")
 with open (outputfile,"w") as resultsfile:
