@@ -17,5 +17,11 @@ with open(filepath,"r") as csvfile:
         change = (float(ProfitLoss[i]) - float(ProfitLoss[i-1]))
         ChangeAm.append(change)
         avepl = (sum(ChangeAm)/len(ChangeAm))
+        increase = max(ChangeAm)
+        decrease = min(ChangeAm)
 print(avepl)
+print(increase)
+print(decrease)
+print(TotalProfLoss)
+print(MonthCount)
 
