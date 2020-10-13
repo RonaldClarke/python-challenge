@@ -21,8 +21,8 @@ with open (filepath, "r") as csvfile:
             votecounts.append(1)
 
 print(votecounts)
-           
-        
-        
-
 print(candidates)
+
+outputfile = os.path.join("/Users/ronaldclarke/Desktop/GitHub/python-challenge/PyPoll/Analysis/results.txt")
+with open (outputfile,"w") as resultsfile:
+    resultsfile.write("Results")
